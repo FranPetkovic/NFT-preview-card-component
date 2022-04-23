@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --svjPlava: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --tamnoPlava1: hsl(217, 54%, 11%);
+    --tamnoPlava2:hsl(216, 50%, 16%);
+    --tamnoPlava3:hsl(215, 32%, 27%);
+    --bijela: hsl(0, 0%, 100%);
+    --cyanProzirna:hsla(178, 100%, 50%, 0.308);
+}
+body{
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    background-color: var(--tamnoPlava1);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    color: var(--svjPlava);
+}
+main{
+    max-width: 400px;
+    background-color: red;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: var(--tamnoPlava2);
+}
+.main-div-pomoc{
+    border-radius: 10px;
+    aspect-ratio: 1/1;
+    position: relative;
+}
+.boja{
+    background-color: var(--cyan);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-div-pomoc>img{
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+}
+.main-div-pomoc:hover>img{
+    z-index: 10;
+}
+.main-div-pomoc:hover .boja{
+    cursor: pointer;
+    z-index: 11;
+    background-color: var(--cyanProzirna);
+}
+.main-div-pomoc:hover .slika1{
+    opacity: 1!important;
+}
+main h1{
+    color: var(--bijela);
+    margin: 20px 0;
+    cursor:pointer;
+}
+main h1:hover{
+    color: var(--cyan);
+}
+main>p{
+    margin: 20px 0;
+}
+.main-div1{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.cijena{
+    display: flex;
+    gap: 10px;
+}
+
+.cijena div{
+    position: relative;
+    top: 2px;
+}
+.cijena p{
+    color: var(--cyan);
+}
+
+.vrijeme{
+    display: flex;
+    gap: 10px;
+}
+.vrijeme div{
+    position: relative;
+    top: 2px;
+}
+.crta{
+    background-color: var(--tamnoPlava3);
+    height: 1px;
+    margin: 20px 0;
+}
+.creator{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    gap: 20px;
+}
+.creator img{
+    width: 35px;
+    border: 1px solid var(--bijela);
+    border-radius: 50%;
+}
+span{
+    color: var(--bijela);
+}
+span:hover{
+    color: var(--cyan);
+    cursor:pointer;
+}
+@media screen and (max-width: 425px) {
+    body{
+        font-size: 14px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    main{
+        max-width: 300px;
+    }
+}
